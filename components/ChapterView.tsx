@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, useRef, Suspense } from 'react';
 import { Grade, Subject, Chapter, LearningModule, QuizQuestion, NextStepRecommendation, ChapterProgress, Student, CategorizedProblems, VocabularyDeepDive, Theorem, FormulaDerivation, Formula, ProblemSolvingTemplate, CommonMistake, Experiment, TimelineEvent, KeyFigure, PrimarySourceSnippet, CaseStudy, GrammarRule, LiteraryDevice, HOTQuestion } from '../types';
 import * as contentService from '../services/contentService';
 import { generateQuiz, generateNextStepRecommendation, generateConceptMapImage, generateSectionContent } from '../services/geminiService';
 import { getChapterProgress, saveChapterProgress, getConceptMap, saveConceptMap } from '../services/pineconeService';
-import LoadingSpinner from './LoadingSpinner';
-import ConceptCard from './ConceptCard';
-import Quiz from './Quiz';
-import Confetti from './Confetti';
+const LoadingSpinner = React.lazy(() => import('./LoadingSpinner'));
+const ConceptCard = React.lazy(() => import('./ConceptCard'));
+const Quiz = React.lazy(() => import('./Quiz'));
+const Confetti = React.lazy(() => import('./Confetti'));
 import { RocketLaunchIcon, ArchiveBoxIcon, LightBulbIcon, ArrowPathIcon, ForwardIcon, CheckCircleIcon, BookOpenIcon, VariableIcon, ClipboardDocumentListIcon, QuestionMarkCircleIcon, ExclamationTriangleIcon as ExclamationTriangleSolid, TrophyIcon as TrophySolid, BeakerIcon, GlobeAltIcon, LinkIcon, AcademicCapIcon, PlayCircleIcon, PauseCircleIcon, StopCircleIcon, ClockIcon, UserGroupIcon, DocumentTextIcon, LanguageIcon, SparklesIcon as SparklesSolid, MapIcon, PuzzlePieceIcon, CalculatorIcon, ScaleIcon, ShareIcon, CheckBadgeIcon, CpuChipIcon, SpeakerWaveIcon, FilmIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import { useLanguage } from '../contexts/Language-context';
 import { useTTS } from '../hooks/useTTS';

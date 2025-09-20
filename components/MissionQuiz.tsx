@@ -4,7 +4,7 @@ import { savePerformanceRecord } from '../services/pineconeService';
 import { useLanguage } from '../contexts/Language-context';
 import { useAuth } from '../contexts/AuthContext';
 import { LightBulbIcon, XCircleIcon, CheckCircleIcon, ArrowRightIcon } from '@heroicons/react/24/solid';
-import FittoAvatar from './FittoAvatar';
+const FittoAvatar = React.lazy(() => import('./FittoAvatar'));
 
 type MissionTask = QuizQuestion | IQExercise | EQExercise;
 

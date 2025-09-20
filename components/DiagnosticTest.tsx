@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Grade, Subject, QuizQuestion } from '../types';
 import { generateDiagnosticTest } from '../services/geminiService';
-import Quiz from './Quiz';
+const Quiz = React.lazy(() => import('./Quiz'));
 import LoadingSpinner from './LoadingSpinner';
 import { ArrowLeftIcon, LightBulbIcon } from '@heroicons/react/24/solid';
 import { useLanguage } from '../contexts/Language-context';

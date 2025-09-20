@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Grade, Subject, Chapter } from '../types';
 import { ArrowLeftIcon, ChevronRightIcon, DocumentChartBarIcon } from '@heroicons/react/24/solid';
-import DiagnosticTest from './DiagnosticTest';
+const DiagnosticTest = React.lazy(() => import('./DiagnosticTest'));
 import { useLanguage } from '../contexts/Language-context';
 import { getIcon } from './IconMap';
 
