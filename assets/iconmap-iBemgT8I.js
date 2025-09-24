@@ -1,0 +1,1 @@
+import{a2 as r,a3 as e,N as n,a4 as c,a5 as s,a6 as f,a7 as p,J as t,a8 as a}from"./vendor_react-DXiryTHP.js";const I={BookOpenIcon:a,BeakerIcon:t,CalculatorIcon:p,GlobeAltIcon:f,LanguageIcon:s,ComputerDesktopIcon:c,SparklesIcon:n,TrophyIcon:e,CpuChipIcon:r},w=o=>I[o]||a;export{w as g};
